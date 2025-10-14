@@ -1,7 +1,8 @@
 #root {
-  padding: 0.5rem;
+  padding: 0rem 23rem 0rem 23rem;
   text-align: center;
   background-color: oklch(21% 0.034 264.665);
+  font-family: 'montserrat', sans-serif;
 }
 
 .logo {
@@ -16,6 +17,11 @@
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
+
+.body{
+  font-family: 'montserrat', sans-serif;
+}
+
 
 @keyframes logo-spin {
   from {
