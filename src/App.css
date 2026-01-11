@@ -1,7 +1,9 @@
 #root {
-  padding: 0rem 23rem 0rem 23rem;
+  width: 100%;
+  margin: 0 auto;
   text-align: center;
-  background-color: oklch(21% 0.034 264.665);
+  background-color: #242424;
+  /* Fallback matching index.css */
   font-family: 'montserrat', sans-serif;
 }
 
@@ -11,14 +13,16 @@
   will-change: filter;
   transition: filter 300ms;
 }
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
+
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
-.body{
+.body {
   font-family: 'montserrat', sans-serif;
 }
 
@@ -27,6 +31,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
