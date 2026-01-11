@@ -4,14 +4,14 @@ export default function Hero() {
             <div className="flex flex-col items-center md:items-start w-full max-w-6xl mx-auto">
 
                 <div className="w-full flex flex-col md:block text-center md:text-left pt-10 md:pt-20">
-                    <span className="text-white font-bold text-xl md:text-4xl mb-2 block">Hola soy</span>
+                    <span className="text-white font-bold text-xl md:text-4xl mb-2 block animate-fade-in-down">Hola soy</span>
 
                     <div className="flex flex-col leading-none w-full">
-                        <h1 className="text-amber-50 text-[2.5rem] sm:text-6xl md:text-8xl lg:text-9xl font-bold tracking-tight break-words overflow-hidden">Jose</h1>
-                        <h2 className="text-amber-50 text-[2.5rem] sm:text-6xl md:text-8xl lg:text-9xl font-bold tracking-tight break-words overflow-hidden">Mendez</h2>
+                        <h1 className="text-amber-50 text-[3.5rem] sm:text-7xl md:text-[8rem] lg:text-[11rem] xl:text-[13rem] 2xl:text-[15rem] font-bold tracking-tighter break-words animate-fade-in-up delay-100 leading-[0.8]">Jose</h1>
+                        <h2 className="text-amber-50 text-[3.5rem] sm:text-7xl md:text-[8rem] lg:text-[11rem] xl:text-[13rem] 2xl:text-[15rem] font-bold tracking-tighter break-words animate-fade-in-up delay-200 leading-[0.8]">Mendez</h2>
                     </div>
 
-                    <span className="text-white font-bold text-lg md:text-3xl mt-4 md:mt-8 block md:text-right w-full">
+                    <span className="text-white font-bold text-lg md:text-4xl mt-6 md:mt-4 block md:text-right w-full animate-fade-in delay-300">
                         Ingeniero de sistemas
                     </span>
                 </div>
@@ -20,19 +20,19 @@ export default function Hero() {
 
                     <a href="#projects" className="text-white flex justify-center px-6 py-3 w-full md:w-auto items-center gap-3 bg-transparent border-2 border-amber-100 font-bold rounded-lg shadow-md
                     hover:scale-105 hover:shadow-lg transition-all duration-200 active:scale-95 text-sm md:text-base whitespace-nowrap">
-                        Mis proyectos
+                        Mis proyectos destacados
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-5">
                             <path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
                         </svg>
                     </a>
 
-                    <button className="text-white flex justify-center px-6 py-3 w-full md:w-auto items-center gap-3 bg-transparent font-bold rounded-lg shadow-md border-2 border-amber-100
+                    <a href="https://drive.google.com/file/d/1iwOC997UtA1Yx6h-zX3FAzR6R6O3wHEK/view?usp=sharing" className="text-white flex justify-center px-6 py-3 w-full md:w-auto items-center gap-3 bg-transparent font-bold rounded-lg shadow-md border-2 border-amber-100
                     hover:scale-105 hover:shadow-lg transition-all duration-200 active:scale-95 text-sm md:text-base whitespace-nowrap">
                         Curriculum
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-5">
                             <path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
                         </svg>
-                    </button>
+                    </a>
 
                 </div>
 
