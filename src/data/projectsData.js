@@ -11,7 +11,7 @@ export const projectsData = [
             "https://res.cloudinary.com/dxl97cptv/image/upload/v1768153343/d2ab1218-bed7-4b11-9087-3c70d21e20a8.png",
             "https://res.cloudinary.com/dxl97cptv/image/upload/v1768153278/e42dde67-2cb2-47cc-95fd-97f93dc1a327.png"
         ],
-        technologies: ["Java", "Spring Boot", "PostgreSQL", "Docker", "Git", "GitHub"],
+        technologies: ["Java", "Spring Boot", "PostgreSQL", "Docker", "Git", "react", "GitHub"],
         githubUrl: "https://github.com/IngJoseMendez/Sistema-gesti-n-Vitalexa",
         demoUrl: "#"
     },
@@ -27,7 +27,7 @@ export const projectsData = [
             "https://res.cloudinary.com/dxl97cptv/image/upload/v1768170986/cadd00de-616c-42a0-8fca-f3d6b553ae08.png",
             "https://res.cloudinary.com/dxl97cptv/image/upload/v1768171017/ffb1c05e-1d7b-4546-a176-7e3a6c5a480e.png"
         ],
-        technologies: ["Java", "Spring Boot", "PostgreSQL", "Docker", "Git", "GitHub", "Mockito"],
+        technologies: ["Java", "Spring Boot", "PostgreSQL", "Docker", "Git", "react", "GitHub", "Mockito"],
         githubUrl: "https://github.com/IngJoseMendez/Medical_office_management",
         demoUrl: "#"
     },
