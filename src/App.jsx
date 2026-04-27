@@ -9,6 +9,8 @@ import Footer from './components/Footer'
 import ProjectDetail from './components/ProjectDetail'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
+import Technologies from './components/Technologies'
+
 function App() {
   const [count, setCount] = useState(0)
 
@@ -20,6 +22,7 @@ function App() {
             <>
               <Header />
               <Hero />
+              <Technologies />
               <Projects />
               <Footer />
             </>
