@@ -72,7 +72,19 @@ export default function ProjectDetail() {
             <h3 className="font-mono text-accent mb-4">## Descripción</h3>
             <p className="text-muted leading-relaxed whitespace-pre-line break-words">{project.fullDescription}</p>
           </section>
-          <aside className="lg:col-span-1">
+          <aside className="lg:col-span-1 space-y-6">
+            {project.techniques && project.techniques.length > 0 && (
+              <div className="border border-line rounded-xl bg-surface p-5">
+                <h3 className="font-mono text-accent mb-4">// técnicas · 2026</h3>
+                <ul className="space-y-2.5">
+                  {project.techniques.map((t) => (
+                    <li key={t} className="flex items-start gap-2.5 text-sm text-ink">
+                      <span className="text-accent font-mono mt-0.5 shrink-0">▸</span><span>{t}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
             <div className="border border-line rounded-xl bg-surface p-5">
               <h3 className="font-mono text-accent mb-4">// dependencies</h3>
               <div className="flex flex-wrap gap-2 mb-6">

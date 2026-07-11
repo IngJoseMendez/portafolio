@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react'
 import { siteData } from '../data/siteData'
 import WindowFrame from './ui/WindowFrame'
 import StatusBar from './ui/StatusBar'
@@ -9,8 +10,20 @@ import Reveal from './ui/Reveal'
 import DotGrid from './ui/DotGrid'
 import { ArrowIcon, DownloadIcon, GithubIcon, LinkedinIcon, InstagramIcon } from './ui/icons'
 
+const LINES = [
+  "const stack = [Java, Spring, React]",
+  "const foco = [backend, IA, datos]",
+  "const enfoque_2026 = [agentes, RAG, automatización]",
+]
+
 export default function Hero() {
   const s = siteData
+  const [li, setLi] = useState(0)
+  useEffect(() => {
+    const id = setInterval(() => setLi((n) => (n + 1) % LINES.length), 4200)
+    return () => clearInterval(id)
+  }, [])
+
   return (
     <section id="inicio" className="relative overflow-hidden">
       <DotGrid />
@@ -19,8 +32,11 @@ export default function Hero() {
         <div className="grid md:grid-cols-[1.08fr_.92fr] gap-10 items-center">
           <Reveal className="min-w-0">
             <p className="font-mono text-sm text-accent mb-4">{s.hero.kicker}</p>
-            <h1 className="text-ink-hi font-extrabold leading-[.92] tracking-[-.04em] text-[clamp(44px,7.4vw,86px)]">{s.name}</h1>
-            <p className="mt-5 text-[clamp(14px,1.7vw,18px)] text-accent"><Typewriter text={s.hero.stackLine} /></p>
+            <div className="relative">
+              <span aria-hidden="true" className="absolute -left-8 -top-10 w-72 h-44 bg-accent/15 blur-3xl rounded-full -z-10" />
+              <h1 className="text-ink-hi font-extrabold leading-[.92] tracking-[-.04em] text-[clamp(44px,7.4vw,86px)]">{s.name}</h1>
+            </div>
+            <p className="mt-5 text-[clamp(14px,1.7vw,18px)] text-accent min-h-[1.6em]"><Typewriter key={LINES[li]} text={LINES[li]} /></p>
             <p className="mt-4 text-muted leading-relaxed max-w-[44ch]">{s.hero.blurb}</p>
             <div className="flex flex-wrap gap-3 mt-7">
               <CommandButton as="a" href="#proyectos" variant="primary" icon={ArrowIcon}>Ver proyectos</CommandButton>

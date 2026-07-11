@@ -1,8 +1,10 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Header from './components/Header'
 import Hero from './components/Hero'
+import Stats from './components/Stats'
 import About from './components/About'
 import Technologies from './components/Technologies'
+import Capabilities from './components/Capabilities'
 import Projects from './components/projects'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
@@ -18,8 +20,10 @@ function App() {
               <Header />
               <main>
                 <Hero />
+                <Stats />
                 <About />
                 <Technologies />
+                <Capabilities />
                 <Projects />
                 <Contact />
               </main>
