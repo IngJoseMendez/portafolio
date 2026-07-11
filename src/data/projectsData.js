@@ -1,6 +1,7 @@
 export const projectsData = [
     {
         id: 1,
+        slug: "erp-ligero",
         title: "ERP ligero",
         shortDescription: "Solución ligera para ventas, inventario, facturación, clientes, usuario/roles, reportes y métricas en PyMEs.",
         fullDescription: "Sistema de gestión modular diseñado para optimizar el flujo de ventas end-to-end, control de inventario y usuarios en tiempo real, análisis estratégico del negocio mediante métricas clave y seguridad basada en roles con Spring Security + JWT para control de acceso.  Desarrollo de backend con Java 17 y Spring Boot 3 siguiendo principios REST, validación de datos y separación por capas (controller/service/repository/mappers/dtos/entitys/exeptions/services/utils). Implementación de persistencia con Spring Data JPA y PostgreSQL para la gestión de datos de la empresa. Automatización de mapeo de DTOs/entidades con MapStruct + Lombok para reducir boilerplate y mantener consistencia del modelo. Despliegue y operación en entornos cloud utilizando Vercel, Railway y Cloudinary para almacenamiento y distribución de recursos. ",
@@ -17,6 +18,7 @@ export const projectsData = [
     },
     {
         id: 2,
+        slug: "oficina-medica",
         title: "Sistema de Gestión Integral para Oficina Médica",
         shortDescription: "Sistema de gestión para consultorios médicos",
         fullDescription: "Sistema de gestión para consultorios médicos desarrollado en Java con Spring Boot, orientado a administrar pacientes, citas, personal y procesos básicos de un consultorio u oficina médica moderna. Diseño de una arquitectura modular con seguridad basada en roles mediante Spring Security y JWT para el control de acceso, desarrollando el backend en Java 17 y Spring Boot 3 siguiendo principios REST, con persistencia implementada mediante Spring Data JPA y PostgreSQL para gestionar datos clínicos y administrativos de la oficina médica, automatización del mapeo entre DTOs y entidades usando MapStruct optimizada para mantener una serialización eficiente de los modelos, y una estrategia de pruebas y calidad soportada en Spring Test, testcontainers (PostgreSQL) y Mockito para validar la lógica y los componentes del sistema.",

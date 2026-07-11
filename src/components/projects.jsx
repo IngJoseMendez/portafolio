@@ -1,16 +1,19 @@
-import ProjectCard from './ProjectCard';
-import { projectsData } from '../data/projectsData';
+import ProjectCard from './ProjectCard'
+import { projectsData } from '../data/projectsData'
+import SectionHeader from './ui/SectionHeader'
+import Reveal from './ui/Reveal'
 
 export default function Projects() {
-    return (
-        <section id="projects" className="w-full bg-gray-900 mx-auto flex flex-col items-center justify-between py-20 px-4">
-            <h1 className="text-4xl md:text-5xl font-bold text-amber-50 mb-16 text-center">MIS PROYECTOS DESTACADOS</h1>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto w-full">
-                {projectsData.map(project => (
-                    <ProjectCard key={project.id} project={project} />
-                ))}
-            </div>
-        </section>
-    );
+  return (
+    <section id="proyectos" className="relative py-20 md:py-28">
+      <div className="max-w-6xl mx-auto px-4 md:px-8">
+        <SectionHeader command="$ ls ~/proyectos" title="Proyectos destacados" />
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {projectsData.map((p, i) => (
+            <Reveal key={p.id} delay={(i % 3) * 90}><ProjectCard project={p} /></Reveal>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
 }
