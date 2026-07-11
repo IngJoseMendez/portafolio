@@ -1,28 +1,28 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Header from './components/Header'
 import Hero from './components/Hero'
+import About from './components/About'
+import Technologies from './components/Technologies'
 import Projects from './components/projects'
+import Contact from './components/Contact'
 import Footer from './components/Footer'
 import ProjectDetail from './components/ProjectDetail'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-
-import Technologies from './components/Technologies'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <Router>
-      <div className='max-w-8xl mx-auto min-h-screen bg-gray-900 overflow-x-hidden'>
+      <div className="min-h-screen bg-bg overflow-x-hidden">
         <Routes>
           <Route path="/" element={
             <>
               <Header />
-              <Hero />
-              <Technologies />
-              <Projects />
+              <main>
+                <Hero />
+                <About />
+                <Technologies />
+                <Projects />
+                <Contact />
+              </main>
               <Footer />
             </>
           } />
