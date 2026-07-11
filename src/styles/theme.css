@@ -16,6 +16,9 @@
   --font-mono: "JetBrains Mono Variable", ui-monospace, "SF Mono", Consolas, monospace;
 }
 
+/* mundo visual oscuro deliberado: scrollbars y controles nativos en oscuro */
+:root { color-scheme: dark; }
+
 /* fondo de puntos reutilizable (decorativo) */
 .dotgrid {
   background-image: radial-gradient(var(--color-line) 1px, transparent 1px);

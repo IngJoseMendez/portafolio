@@ -13,3 +13,6 @@ vi.stubGlobal('IntersectionObserver', IO)
 window.matchMedia = window.matchMedia || function () {
   return { matches: false, addEventListener() {}, removeEventListener() {}, addListener() {}, removeListener() {} }
 }
+
+// jsdom no implementa scrollTo (usado por ProjectDetail) — stub para output limpio
+window.scrollTo = window.scrollTo || (() => {})
