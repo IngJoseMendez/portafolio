@@ -3,7 +3,7 @@ export const siteData = {
   role: "Ingeniero de Sistemas",
   focus: ["backend", "full-stack", "análisis de datos", "automatización"],
   email: "josealbertomendez13@gmail.com",
-  cvUrl: "https://drive.google.com/file/d/1iwOC997UtA1Yx6h-zX3FAzR6R6O3wHEK/view?usp=sharing",
+  cvUrl: "https://drive.google.com/file/d/1eiCOBD5spORCulbtK2xeEGFH1R_3jsnz/view?usp=sharing",
   photo: "https://res.cloudinary.com/dxl97cptv/image/upload/v1783721300/Gemini_Generated_Image__shgnnq.png",
   socials: {
     github: "https://github.com/IngJoseMendez",
