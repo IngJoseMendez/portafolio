@@ -3,7 +3,10 @@ import { projectsData } from '../data/projectsData';
 import { useEffect, useState } from 'react';
 import WindowFrame from './ui/WindowFrame';
 import MonoChip from './ui/MonoChip';
-import { GithubIcon } from './ui/icons';
+import { GithubIcon, ArrowIcon } from './ui/icons';
+
+// Las imágenes pueden venir como URL o como { src, caption }
+const toImage = (img) => (typeof img === 'string' ? { src: img, caption: '' } : img);
 
 export default function ProjectDetail() {
   const { id } = useParams();
@@ -27,16 +30,17 @@ export default function ProjectDetail() {
     );
   }
 
-  const images = project.images && project.images.length > 0 ? project.images : [project.image];
+  const images = (project.images && project.images.length > 0 ? project.images : [project.image]).map(toImage);
 
   return (
     <div className="min-h-screen bg-bg text-ink p-4 md:p-12 pb-20 overflow-x-hidden relative">
       {selectedImage && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-bg/95 p-4 backdrop-blur-sm" onClick={() => setSelectedImage(null)}>
+        <div className="fixed inset-0 z-50 flex flex-col items-center justify-center gap-4 bg-bg/95 p-4 backdrop-blur-sm" onClick={() => setSelectedImage(null)}>
           <button className="absolute top-6 right-6 text-ink hover:text-accent transition-colors z-[60] bg-surface/60 p-2 rounded-full" onClick={() => setSelectedImage(null)} aria-label="Cerrar">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-8 h-8"><path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
           </button>
-          <img src={selectedImage} alt="Vista completa" className="max-w-full max-h-[90vh] object-contain rounded-md shadow-2xl select-none" onClick={(e) => e.stopPropagation()} />
+          <img src={selectedImage.src} alt={selectedImage.caption || 'Vista completa'} className="max-w-full max-h-[84vh] object-contain rounded-md shadow-2xl select-none" onClick={(e) => e.stopPropagation()} />
+          {selectedImage.caption && <p className="font-mono text-sm text-muted text-center max-w-3xl">{selectedImage.caption}</p>}
         </div>
       )}
 
@@ -49,23 +53,44 @@ export default function ProjectDetail() {
         <div className="space-y-6 mb-10">
           <WindowFrame title={`${project.slug}/preview.png`} className="cursor-zoom-in">
             <div className="relative group" onClick={() => setSelectedImage(images[0])}>
-              <img src={images[0]} alt={project.title} className="w-full h-auto object-cover max-h-[560px] group-hover:opacity-95 transition" />
+              <img src={images[0].src} alt={images[0].caption || project.title} className="w-full h-auto object-cover max-h-[560px] group-hover:opacity-95 transition" />
               <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition bg-bg/20">
                 <span className="font-mono text-xs bg-bg/70 text-ink px-3 py-1.5 rounded-full backdrop-blur">ver pantalla completa</span>
               </div>
             </div>
           </WindowFrame>
 
+          {project.video && (
+            <WindowFrame title={`${project.slug}/demo.mp4`}>
+              <video src={project.video} poster={project.videoPoster} controls playsInline preload="none" className="w-full h-auto block bg-black" />
+            </WindowFrame>
+          )}
+
           {images.length > 1 && (
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
               {images.slice(1).map((img, index) => (
-                <div key={index} className="rounded-xl overflow-hidden border border-line hover:border-accent transition cursor-zoom-in" onClick={() => setSelectedImage(img)}>
-                  <img src={img} alt={`${project.title} ${index + 2}`} className="w-full h-44 object-cover" loading="lazy" />
-                </div>
+                <figure key={img.src} className="rounded-xl overflow-hidden border border-line hover:border-accent transition cursor-zoom-in bg-surface" onClick={() => setSelectedImage(img)}>
+                  <img src={img.src} alt={img.caption || `${project.title} ${index + 2}`} className="w-full h-44 object-cover object-top" loading="lazy" />
+                  {img.caption && <figcaption className="px-3 py-2.5 text-xs text-muted leading-snug">{img.caption}</figcaption>}
+                </figure>
               ))}
             </div>
           )}
         </div>
+
+        {project.features && project.features.length > 0 && (
+          <section className="mb-10">
+            <h3 className="font-mono text-accent mb-4">## Qué resuelve</h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+              {project.features.map((f) => (
+                <div key={f.title} className="border border-line rounded-xl bg-surface p-4">
+                  <p className="text-ink-hi font-bold text-sm mb-1.5">{f.title}</p>
+                  <p className="text-muted text-sm leading-relaxed">{f.text}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           <section className="lg:col-span-2">
@@ -90,6 +115,11 @@ export default function ProjectDetail() {
               <div className="flex flex-wrap gap-2 mb-6">
                 {project.technologies.map((t) => <MonoChip key={t}>{t}</MonoChip>)}
               </div>
+              {project.demoUrl && project.demoUrl !== '#' && (
+                <a href={project.demoUrl} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 w-full py-3 mb-3 rounded-lg border border-accent text-accent font-mono hover:bg-accent/10 transition-colors">
+                  Ver demo <ArrowIcon className="w-4 h-4" />
+                </a>
+              )}
               <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 w-full py-3 rounded-lg border border-line-soft text-ink font-mono hover:border-accent transition-colors">
                 <GithubIcon className="w-4 h-4" /> Ver Código
               </a>
