@@ -1,10 +1,16 @@
 import Reveal from './ui/Reveal'
+import { projectsData } from '../data/projectsData'
 
+const dosCifras = (n) => String(n).padStart(2, '0')
+// Los proyectos con un agente de IA son los que usan Claude
+const conIA = projectsData.filter(p => p.technologies.some(t => /claude/i.test(t))).length
+
+// Commits propios en 2026 y tests contados en los repos de los proyectos (actualizado al 23-oct-2026)
 const STATS = [
-  { k: "05", v: "proyectos" },
-  { k: "15+", v: "tecnologías" },
-  { k: "03", v: "con IA / ML" },
-  { k: "2026", v: "disponible" },
+  { k: dosCifras(projectsData.length), v: "proyectos" },
+  { k: dosCifras(conIA), v: "con agentes de IA" },
+  { k: "1.400+", v: "commits en 2026" },
+  { k: "6.000+", v: "tests automatizados" },
 ]
 
 export default function Stats() {

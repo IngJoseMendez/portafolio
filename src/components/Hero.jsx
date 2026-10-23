@@ -11,9 +11,9 @@ import DotGrid from './ui/DotGrid'
 import { ArrowIcon, DownloadIcon, GithubIcon, LinkedinIcon, InstagramIcon } from './ui/icons'
 
 const LINES = [
-  "const stack = [Java, Spring, React]",
-  "const foco = [backend, IA, datos]",
-  "const enfoque_2026 = [agentes, RAG, automatización]",
+  "const construyo = [ERPs, agentes de IA, apps de campo]",
+  "const para = [distribuidoras, clínicas, droguerías]",
+  "const stack = [TypeScript, Java, PostgreSQL, Claude]",
 ]
 
 export default function Hero() {
@@ -37,7 +37,7 @@ export default function Hero() {
               <h1 className="text-ink-hi font-extrabold leading-[.92] tracking-[-.04em] text-[clamp(44px,7.4vw,86px)]">{s.name}</h1>
             </div>
             <p className="mt-5 text-[clamp(14px,1.7vw,18px)] text-accent min-h-[1.6em]"><Typewriter key={LINES[li]} text={LINES[li]} /></p>
-            <p className="mt-4 text-muted leading-relaxed max-w-[44ch]">{s.hero.blurb}</p>
+            <p className="mt-4 text-muted leading-relaxed max-w-[48ch]">{s.hero.blurb}</p>
             <div className="flex flex-wrap gap-3 mt-7">
               <CommandButton as="a" href="#proyectos" variant="primary" icon={ArrowIcon}>Ver proyectos</CommandButton>
               <CommandButton as="a" href={s.cvUrl} variant="ghost" icon={DownloadIcon}>Descargar CV</CommandButton>

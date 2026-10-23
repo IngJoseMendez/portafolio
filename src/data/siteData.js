@@ -1,8 +1,9 @@
 export const siteData = {
   name: "Jose Méndez",
   role: "Ingeniero de Sistemas",
-  focus: ["backend", "full-stack", "análisis de datos", "automatización"],
+  focus: ["sistemas de gestión a la medida", "agentes de IA por WhatsApp", "backend y APIs", "automatización"],
   email: "josealbertomendez13@gmail.com",
+  whatsapp: "573152167609",
   cvUrl: "https://drive.google.com/file/d/1eiCOBD5spORCulbtK2xeEGFH1R_3jsnz/view?usp=sharing",
   photo: "https://res.cloudinary.com/dxl97cptv/image/upload/v1783721300/Gemini_Generated_Image__shgnnq.png",
   socials: {
@@ -11,20 +12,20 @@ export const siteData = {
     instagram: "https://www.instagram.com/jose.mendez1207/",
   },
   hero: {
-    kicker: "// ingeniero de sistemas",
-    stackLine: "const stack = [Java, Spring, React]",
-    blurb: "Backend & full-stack. APIs REST con Spring Security + JWT, JPA/PostgreSQL, contenedores y despliegue en la nube. Código limpio, en capas y probado.",
-    chips: ["Java 17", "Spring Boot 3", "PostgreSQL", "Docker", "React"],
+    kicker: "// ingeniero de sistemas · santa marta, colombia",
+    blurb: "Construyo el software con el que operan negocios reales: ERPs para distribuidoras, la operación de una empresa de agua con app para sus operarios, tiendas online y agentes de IA que atienden, cobran y venden por WhatsApp.",
+    chips: ["TypeScript", "Java · Spring Boot", "NestJS · Next.js", "PostgreSQL", "Claude API"],
   },
   bioLines: [
-    "Ingeniero de Sistemas full-stack con foco en el backend. Diseño y construyo APIs REST seguras y sistemas en capas con Java 17 y Spring Boot 3, con datos consistentes en PostgreSQL y despliegue en la nube; en el front me muevo con React.",
-    "Trabajo también en análisis de datos —convierto datos crudos en métricas que sirven para decidir— y en automatización de procesos, eliminando el trabajo manual repetitivo con scripts e integraciones para que los sistemas hagan el trabajo pesado.",
-    "Me obsesiona el código limpio, probado y que aguanta en producción: del ERP de una PyME al sistema de una oficina médica.",
+    "Soy Ingeniero de Sistemas en Santa Marta y hago software a la medida para empresas que hoy se manejan con Excel, cuadernos y WhatsApp. Me siento con el dueño, entiendo cómo trabaja su negocio y lo convierto en un sistema que su equipo usa todos los días.",
+    "Entre lo que he construido: Surtix, el ERP de una distribuidora mayorista; STH Suite, la operación de tres empresas de agua con app para los operarios en campo; una tienda online para una droguería, y asistentes de IA que agendan, cobran y venden por WhatsApp. Varios ya están en uso diario.",
+    "Trabajo full-stack con foco en el backend (Java y Spring Boot, TypeScript con NestJS y Fastify, PostgreSQL) y en IA aplicada: agentes que ejecutan acciones reales y confirman antes de mover plata. Me importa que todo cuadre: el inventario, la cartera y los tests.",
   ],
   nav: [
     { label: "~/inicio", href: "#inicio" },
-    { label: "~/stack", href: "#stack" },
     { label: "~/proyectos", href: "#proyectos" },
+    { label: "~/capacidades", href: "#capacidades" },
+    { label: "~/stack", href: "#stack" },
     { label: "~/contacto", href: "#contacto" },
   ],
 }

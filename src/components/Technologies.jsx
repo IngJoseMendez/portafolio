@@ -7,11 +7,11 @@ export default function Technologies() {
     <section id="stack" className="relative py-20 md:py-28 bg-surface/40">
       <div className="max-w-6xl mx-auto px-4 md:px-8">
         <SectionHeader command="$ cat stack.json" title="Tecnologías y herramientas">
-          El ecosistema con el que construyo soluciones robustas, escalables y eficientes.
+          Lo que uso en los proyectos de arriba, del backend al celular del operario.
         </SectionHeader>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {techCategories.map((cat, ci) => (
-            <Reveal key={cat.title} delay={ci * 80} className={cat.title === 'DevOps & Observabilidad' ? 'sm:col-span-2 lg:col-span-1' : ''}>
+            <Reveal key={cat.title} delay={ci * 80}>
               <div className="h-full border border-line rounded-xl bg-surface p-5">
                 <p className="font-mono text-xs text-muted mb-4"><span className="select-none">// </span>{cat.title}</p>
                 <ul className="flex flex-col gap-3">

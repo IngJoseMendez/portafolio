@@ -6,8 +6,8 @@ export default function Capabilities() {
   return (
     <section id="capacidades" className="relative py-20 md:py-28">
       <div className="max-w-6xl mx-auto px-4 md:px-8">
-        <SectionHeader command="$ cat capacidades.md" title="Capacidades técnicas · 2026">
-          Las técnicas y herramientas que uso hoy — de agentes de IA y RAG a concurrencia, datos y automatización.
+        <SectionHeader command="$ cat capacidades.md" title="Lo que sé hacer · 2026">
+          Cada punto sale de un proyecto de este portafolio.
         </SectionHeader>
         <div className="grid gap-4 sm:grid-cols-2">
           {capabilities.map((cap, ci) => (
