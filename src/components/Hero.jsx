@@ -11,9 +11,10 @@ import DotGrid from './ui/DotGrid'
 import { ArrowIcon, DownloadIcon, GithubIcon, LinkedinIcon, InstagramIcon } from './ui/icons'
 
 const LINES = [
-  "const construyo = [ERPs, agentes de IA, apps de campo]",
-  "const para = [distribuidoras, clínicas, droguerías]",
-  "const stack = [TypeScript, Java, PostgreSQL, Claude]",
+  "const rol = 'arquitecto de soluciones'",
+  "const diseño = [arquitectura, datos, IA]",
+  "const construyo = [ERPs, apps de campo, IA]",
+  "const para = [distribuidoras, clínicas]",
 ]
 
 export default function Hero() {
