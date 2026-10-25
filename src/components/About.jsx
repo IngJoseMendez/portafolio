@@ -26,7 +26,7 @@ export default function About() {
     <section id="perfil" className="relative py-20 md:py-28">
       <div className="max-w-6xl mx-auto px-4 md:px-8">
         <SectionHeader command="$ cat perfil.md" title="Perfil profesional" />
-        <div className="grid md:grid-cols-[1fr_.42fr] gap-8 mb-8">
+        <div className="grid md:grid-cols-[1fr_.5fr] gap-8 mb-8">
           <Reveal>
             <WindowFrame title="perfil.md — bash">
               <div className="p-6 md:p-8 font-mono text-sm md:text-[15px] leading-relaxed space-y-4">
@@ -43,10 +43,19 @@ export default function About() {
               <div>
                 <p className="text-muted mb-1">// rol</p>
                 <p className="text-ink-hi">{s.role}</p>
+                <p className="text-accent">{s.specialty}</p>
+              </div>
+              <div>
+                <p className="text-muted mb-1">// experiencia</p>
+                <p className="text-ink-hi">{s.experience}</p>
               </div>
               <div>
                 <p className="text-muted mb-1">// formación</p>
                 <p className="text-ink-hi">{s.degree}</p>
+              </div>
+              <div>
+                <p className="text-muted mb-1">// idiomas</p>
+                <p className="text-ink-hi">{s.languages}</p>
               </div>
               <div>
                 <p className="text-muted mb-1">// base</p>

@@ -6,10 +6,7 @@ export default function Footer() {
   return (
     <footer className="border-t border-line py-10">
       <div className="max-w-6xl mx-auto px-4 md:px-8 flex flex-col md:flex-row items-center justify-between gap-4 font-mono text-xs text-muted">
-        <div>
-          <p>// © 2026 Jose Méndez · Arquitecto de Soluciones</p>
-          <p>// built with React + Tailwind — el mejor de todos los ingenieros ;)</p>
-        </div>
+        <p>// © 2026 Jose Méndez · Ingeniero de Software Full-Stack</p>
         <div className="flex gap-4">
           <a href={s.socials.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="hover:text-accent transition-colors"><GithubIcon className="w-5 h-5" /></a>
           <a href={s.socials.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="hover:text-accent transition-colors"><LinkedinIcon className="w-5 h-5" /></a>

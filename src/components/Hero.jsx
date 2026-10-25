@@ -11,7 +11,7 @@ import DotGrid from './ui/DotGrid'
 import { ArrowIcon, DownloadIcon, GithubIcon, LinkedinIcon, InstagramIcon } from './ui/icons'
 
 const LINES = [
-  "const rol = 'arquitecto de soluciones'",
+  "const rol = 'full-stack · arquitectura'",
   "const diseño = [arquitectura, datos, IA]",
   "const construyo = [ERPs, apps de campo, IA]",
   "const para = [distribuidoras, clínicas]",
