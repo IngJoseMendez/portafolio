@@ -18,7 +18,7 @@ export const siteData = {
   },
   hero: {
     kicker: "// ingeniero de sistemas · full stack java / spring boot · santa marta, co",
-    blurb: "Desarrollo software de gestión que empresas reales usan todos los días: cuatro empresas operan en mis sistemas y por ellos pasan más de 700 órdenes al mes.",
+    blurb: "Desarrollo software de gestión que empresas reales usan todos los días: cuatro empresas operan en mis sistemas y por ellos pasan más de 1.000 órdenes al mes.",
     chips: ["Java · Spring Boot", "SQL · PostgreSQL", "TypeScript", "React · Next.js", "Agentes de IA"],
   },
   bioLines: [

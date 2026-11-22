@@ -6,7 +6,7 @@ const dosCifras = (n) => String(n).padStart(2, '0')
 // y Surtix (1 empresa, 5 usuarios, 300+ pedidos/mes)
 const STATS = [
   { k: "04", v: "empresas operan en mis sistemas" },
-  { k: "700+", v: "órdenes al mes en producción" },
+  { k: "1.000+", v: "órdenes al mes en producción" },
   { k: "20", v: "usuarios a diario" },
   { k: dosCifras(projectsData.length), v: "proyectos" },
 ]
