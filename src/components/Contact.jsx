@@ -20,7 +20,7 @@ export default function Contact() {
             <div className="flex flex-wrap gap-3 mb-8">
               <CommandButton as="a" href={`https://wa.me/${s.whatsapp}`} variant="primary" icon={ChatIcon}>Escríbeme por WhatsApp</CommandButton>
               <CommandButton as="a" href={`mailto:${s.email}`} variant="ghost" icon={ArrowIcon}>Escríbeme un correo</CommandButton>
-              <CommandButton as="a" href={s.cvUrl} variant="ghost" icon={DownloadIcon}>Descargar CV</CommandButton>
+              <CommandButton as="a" href={s.cvUrl} download="CV_Jose_Mendez_2026.pdf" variant="ghost" icon={DownloadIcon}>Descargar CV</CommandButton>
             </div>
             <div className="flex gap-4 text-muted">
               <a href={s.socials.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="hover:text-accent transition-colors"><GithubIcon className="w-6 h-6" /></a>

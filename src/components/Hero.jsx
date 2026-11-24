@@ -41,7 +41,7 @@ export default function Hero() {
             <p className="mt-4 text-muted leading-relaxed max-w-[48ch]">{s.hero.blurb}</p>
             <div className="flex flex-wrap gap-3 mt-7">
               <CommandButton as="a" href="#proyectos" variant="primary" icon={ArrowIcon}>Ver proyectos</CommandButton>
-              <CommandButton as="a" href={s.cvUrl} variant="ghost" icon={DownloadIcon}>Descargar CV</CommandButton>
+              <CommandButton as="a" href={s.cvUrl} download="CV_Jose_Mendez_2026.pdf" variant="ghost" icon={DownloadIcon}>Descargar CV</CommandButton>
             </div>
             <div className="flex flex-wrap gap-2 mt-7">{s.hero.chips.map(c => <MonoChip key={c}>{c}</MonoChip>)}</div>
             <div className="flex gap-4 mt-7 text-muted">
